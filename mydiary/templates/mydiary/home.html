@@ -1,0 +1,33 @@
+{% load static %}
+
+
+<!DOCTYPE html>>
+<html lang="kor">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'mydiary/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <box><a href="{% url 'home' %}">MY TRAVEL</a></box>
+        <box2>
+            <box1>로그인</box1>
+            <box1>회원가입</box1>
+        </box2>
+    </header>
+    <main>
+        <div id="top"><a href="{% url 'new' %}">ADD POST</a></div>
+        <div id="container">
+            {% for post in posts_list %}
+            <section>
+            <h3>{{ post.title }}</h3>
+            <p> {{ post.body }}</p>
+            <hr>
+            </section>
+            {% endfor %}
+         </div>
+    </main>
+    <footer>made my Yurim:)</footer>
+</body>
+</html>

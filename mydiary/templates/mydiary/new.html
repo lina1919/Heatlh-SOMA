@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>>
+<html lang="kor">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'mydiary/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <box>MY TRAVEL</box>
+        <box2>
+            <box1>로그인</box1>
+            <box1>회원가입</box1>
+        </box2>
+    </header>
+    <main>
+        <div id="top">new travel?</a></div>
+        <div id="container">
+            <box3>
+                <form method="POST" class="post-form"> {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Save</button>
+                </form>
+            </box3>
+         </div>
+    </main>
+    <footer>made my Yurim:)</footer>
+</body>
+</html>

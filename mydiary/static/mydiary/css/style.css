@@ -1,29 +1,76 @@
+@font-face { font-family: 'TmonMonsori'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff'); font-weight: normal; font-style: normal; }
 *{
-    box-sizing: border-box;
+    font-family: 'TmonMonsori', sans-serif;
 }
-body{
-    background-color: white;
+button:focus{
+    outline: none;
 }
-header{
-    height: 150px;
-    background-color: hotpink;
-    font-size: 50px;
+.navbar-dark .navbar-toggler{
+    border: none;
+}
+#home-img1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/air\ balloon.webp);
+   }
+   #home-img2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/maldives.webp);
+    background-position: center 20%;
+   }
+   #home-img3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/santorini.webp);
+   }
+.home-img-display{
+    height: 90vh;
+    background-image: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-caption-display{
+    top: 37%;
+    color: white;
+}
+.home-caption-display h1{
+    font-size: 4em;
+}
+.home-caption-display p{
+    font-size: 2.5em;
+}
+
+@media only screen and (max-width: 600px) {
+    .home-img-display{
+       height: 60vh;
+   } 
+    .home-caption-display{
+       top: 20%;
+   } 
+    .posting-header{
+       padding: 70px 0;
+   } 
+    .home-caption-display h1{
+       font-size: 2.7em;
+   } 
+    .home-caption-display p{
+       font-size: 1.6em;
+   } 
+    .posting-h{
+       font-size: 2em;
+   } 
+ }
+ .posting-header{
+    padding: 120px 0;
     text-align: center;
-    line-height: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    font-family: Tmon몬소리, 'Times New Roman', Times;
 }
-main{
-    height: auto;
-    border-radius: 11px;
-    width: 1500px;
-    margin: 0 auto;
+
+.posting-en{
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 3;
+}
+.posting-h{
+    font-size: 2.7em;
+    line-height: 1.5;
 }
 footer{
-    height: 100px;
+    height: 75px;
     background-color: darkturquoise;
     font-size: 20px;
     text-align: center;
@@ -32,87 +79,4 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
-    font-family: Tmon몬소리, 'Times New Roman', Times;
-}
-#top{
-    height: 35px;
-    background-color: slategray;
-    margin-bottom: 12px;
-    margin-top: 20px;
-    border-radius:0 0 10px 10px;
-    align-self: center;
-    font-size: 20px;
-    text-align: center;
-    line-height: 35px;
-    font-family: Tmon몬소리, Tmon몬소리, Times;
-}
-#container{
-    background-color: oldlace;
-    margin-bottom: 15px;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-}
-section{
-    height: 185px;
-    width: 1000px;
-    background-color: white;
-    border-radius: 11px;
-    font-size: 20px;
-    text-align: center;
-    line-height: 35px;
-    border-width: 7px;
-    border-style: ridge;
-    border-color: rgb(148, 101, 101); 
-    font-family: Tmon몬소리, Tmon몬소리, Times;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    margin-bottom: 13px;
-}
-box{
-    height: 45%;
-    width: 20%;
-    background-color: white;
-    border-radius: 11px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-}
-box1{   height: 45%;
-    width: 100px;
-    background-color: white;
-    border-radius: 11px;
-    font-size: 20px;
-    text-align: center;
-    line-height: 35px;
-}
-box2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    width: 300px;
-}
-box3{
-    height: 52%;
-    width: 60%;
-    background-color: white;
-    border-radius: 11px;
-    align-content: space-around;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    font-size: 20px;
-    text-align: center;
-    line-height: 35px;
-    border-width: 7px;
-    border-style: ridge;
-    border-color: black; 
-    font-family: Tmon몬소리, Tmon몬소리, Times;
 }

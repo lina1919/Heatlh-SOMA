@@ -24,6 +24,13 @@
                     {% endif %}
                     <h1>{{ post.title }}</h1>
                     <p> {{ post.body|linebreaks }}</p>
+                    {% if post.image %}
+                    <img src="{{post.image.url}}" height=400><br>
+                    이미지 다운: <a href="{{ post.image.url }}" download>{{ post.image.name }}</a>
+                    {% endif %}
+                    {% if post.file %}
+                        첨부파일 다운: <a href="{{ post.file.url }}" download>{{ post.file.name }}</a>
+                    {% endif %}  
                 </div>   
             </box3>
             <a href="{% url 'edit' index=post.pk %}">EDIT</a><br>

@@ -41,7 +41,7 @@ def detail(request, pk):
 def edit(request, index):
     post = get_object_or_404(Content, pk=index)
     if request.method == "POST":
-        form = ContentForm(request.POST, instance=post)
+        form = ContentForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user

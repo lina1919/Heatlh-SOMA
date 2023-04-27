@@ -1,61 +1,63 @@
-{% extends  'mydiary/base.html' %}
+{% extends 'mydiary/base.html' %}
 {% block content %}
 {% load static %}
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-caption home-caption-display">
-            <h1 class="pb-3">서강대 멋쟁이 사자처럼</h4>
-            <p class="pb-3">내 아이디어를 내 손으로 실현한다</p>
-            <a href="#" class="btn btn-warning text-white">자세히 보기</a>
-       </div> 
-      <div id="home-img1" class="carousel-item home-img-display active">
-      </div>
-      <div id="home-img2" class="carousel-item home-img-display">
-      </div>
-      <div id="home-img3" class="carousel-item home-img-display">
-      </div>
+  <div class="carousel-inner">
+    <div class="carousel-caption home-caption-display">
+      <h1 class="pb-3">헬스소마</h4>
+        <p class="pb-3">오늘의 운동을 기록해보자</p>
+        <a href="#" class="btn btn-warning text-white">자세히 보기</a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div id="home-img1" class="carousel-item home-img-display active">
+    </div>
+    <div id="home-img2" class="carousel-item home-img-display">
+    </div>
+    <div id="home-img3" class="carousel-item home-img-display">
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 <!DOCTYPE html>>
 <html lang="kor">
+
 <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'mydiary/css/style.css' %}">
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'mydiary/css/style.css' %}">
 </head>
 <main>
-    <header class="posting-header">
-        <span class="posting-en">Posting</span>
-        <h2 class="posting-h">나의 여행 기록</h2>
-        <a class="text-info" href="{% url 'new' %}">포스트 작성하기</a>
-    </header>
+  <header class="posting-header">
+    <span class="posting-en">Posting</span>
+    <h2 class="posting-h">소마인의 운동 기록</h2>
+    <a class="text-info" href="{% url 'new' %}">포스트 작성하기</a>
+  </header>
 
-    <div class="container">
-        <div class="row">
-            {% for post in posts_list %}
-            <div class="col-lg-4 col-12 pb-5">
-                <div class="card">
-                    <img src="{% static 'mydiary/img/picture.jpg' %}" class="card-img-top" alt="picture">
-                    <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
-                    <p class="card-text">{{ post.body }}</p>
-                    <a href="{% url 'detail' pk=post.pk %}" class="btn btn-dark">포스트 보기</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+  <div class="container">
+    <div class="row">
+      {% for post in posts_list %}
+      <div class="col-lg-4 col-12 pb-5">
+        <div class="card">
+          <img src="{% static 'mydiary/img/picture.png' %}" class="card-img-top" alt="picture">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.body }}</p>
+            <a href="{% url 'detail' pk=post.pk %}" class="btn btn-dark">포스트 보기</a>
+          </div>
         </div>
       </div>
+      {% endfor %}
+    </div>
+  </div>
 </main>
 </body>
+
 </html>
 {% endblock %}

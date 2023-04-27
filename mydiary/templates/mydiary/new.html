@@ -1,19 +1,21 @@
-{% extends  'mydiary/base.html' %}
+{% extends 'mydiary/base.html' %}
 {% block content %}
 {% load static %}
 
 <!DOCTYPE html>>
 <html lang="kor">
+
 <head>
     <meta charset="utf-8">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="{% static 'mydiary/css/style.css' %}">
 </head>
+
 <body>
     <header>
     </header>
     <main>
-        <div id="top">new travel?</a></div>
+        <div id="top">오늘은 어떤 운동을 하셨나요?</a></div>
         <div id="container">
             <box3>
                 <form method="POST" class="post-form" enctype='multipart/form-data'>
@@ -22,8 +24,9 @@
                     <button type="submit">Save</button>
                 </form>
             </box3>
-         </div>
+        </div>
     </main>
 </body>
+
 </html>
 {% endblock %}
